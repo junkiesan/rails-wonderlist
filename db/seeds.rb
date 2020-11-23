@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Julien = Task.new(title: "Julien", details: "Promener le chien")
 Julien.save!
+
+Task.create title: 'Laundry', details: 'Do not mix colors!'
+Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
