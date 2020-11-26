@@ -16,6 +16,15 @@ class TasksController < ApplicationController
     task.save
     redirect_to tasks_path
   end
+
+  def update
+    @task.update(task_params)
+    redirect_to tasks_path(@task)
+  end
+
+  def edit
+  end
+  
   private
 
   def set_tasks
