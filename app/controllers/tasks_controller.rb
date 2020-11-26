@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_tasks, only: [:show]
+  before_action :set_tasks, only: [:show, :edit, :update]
   def index
     @tasks = Task.all
   end
@@ -24,7 +24,7 @@ class TasksController < ApplicationController
 
   def edit
   end
-  
+
   private
 
   def set_tasks
@@ -32,6 +32,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
