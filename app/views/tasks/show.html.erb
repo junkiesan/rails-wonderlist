@@ -1,4 +1,7 @@
 <div class="container">
+<%= link_to edit_task_path(@task.id), class: 'pull-right btn btn-default' do %>
+  <i class="far fa-pencil"></i> Edit this task
+<% end %>
   <h1><%= @task.title %></h1>
   <p class="details"><%= @task.details %><p>
 
