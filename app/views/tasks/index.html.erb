@@ -9,7 +9,9 @@
         <i class="far fa-square"></i>
       <% end %>
       <%= link_to task.title, task_path(task.id) %>
-      .
+      <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+        <i class="fas fa-trash" aria-hidden="true"></i>
+      <% end %>
     </li>
   <% end%>
 </ul>
